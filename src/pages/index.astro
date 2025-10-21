@@ -1,0 +1,261 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Rezzkie Resources">
+    <!-- Hero Section with background image placeholder -->
+    <section class="relative text-white overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center blur-[6px] scale-110" style="background-image: url('/src/landing_background.jpeg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-950/85 via-blue-900/75 to-blue-800/80"></div>
+        
+        <!-- Animated background elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-bounce-gentle"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-bounce-gentle" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 animate-slide-up">
+                    Welcome to <span class="text-gradient">Rezzkie Resources</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 text-blue-100 max-w-4xl mx-auto leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
+                    Your trusted partner for technology solutions and TMpoint Authorised Dealer for Unifi
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up" style="animation-delay: 0.4s;">
+                    <a href="/services" class="bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-blue-50 hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg">
+                        Our Services
+                    </a>
+                    <a href="/contact" class="border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 hover:shadow-xl hover:scale-105 transition-all duration-300 backdrop-blur-sm">
+                        Get In Touch
+                    </a>
+                </div>
+                <div class="mt-12 flex items-center justify-center gap-8 opacity-90 animate-slide-up" style="animation-delay: 0.6s;">
+                    <div class="hover:scale-110 transition-transform duration-300">
+                        <img src="/src/tm_logo.png" alt="TMpoint" class="h-12 w-auto" loading="lazy" />
+                    </div>
+                    <div class="hover:scale-110 transition-transform duration-300">
+                        <img src="/src/unifi_logo.png" alt="unifi Malaysia" class="h-10 w-auto" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+
+			<!-- Enhanced TMpoint badge -->
+			<div class="absolute bottom-8 right-8 animate-scale-in" style="animation-delay: 0.8s;">
+				<div class="inline-flex items-center bg-white/95 backdrop-blur-md border-2 border-blue-600 rounded-xl px-4 py-2 shadow-2xl hover:shadow-blue-500/25 hover:scale-105 transition-all duration-300">
+					<div class="w-8 h-8 bg-gradient-to-br rounded-full flex items-center justify-center mr-3">
+						<img src="/src/tm_logo.png" alt="TM" class="h-5 w-auto" loading="lazy" />
+					</div>
+					<div class="text-left leading-tight flex flex-col justify-center">
+						<p class="m-0 leading-tight text-sm font-bold text-gray-900">TMpoint Permyjaya</p>
+						<p class="m-0 leading-tight text-xs font-medium text-blue-700">Authorised Dealer</p>
+					</div>
+				</div>
+			</div>
+        </div>
+    </section>
+
+    <!-- Services Overview: Procurement, Merchandise, Milwaukee, unifi -->
+	<section class="bg-gradient-to-br from-gray-50 via-white to-gray-100 py-20 relative overflow-hidden">
+		<!-- Background decoration -->
+		<div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5"></div>
+		
+		<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16 animate-fade-in">
+				<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+					Our <span class="text-gradient">Services</span>
+				</h2>
+				<p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Procurement for companies, branded merchandise, Milwaukee tools and official unifi services
+				</p>
+			</div>
+			
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift hover-glow group animate-slide-up border-blue-400 border-1">
+                    <div class="w-20 h-20 rounded-xl flex items-center justify-center mb-8 bg-gradient-to-br from-blue-100 to-blue-200 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <svg class="w-10 h-10 text-blue-600" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M76,108L52,108L52,121C52,121.796 52.316,122.559 52.879,123.121C53.441,123.684 54.204,124 55,124C59.184,124 68.816,124 73,124C73.796,124 74.559,123.684 75.121,123.121C75.684,122.559 76,121.796 76,121L76,108ZM61,112L67,112C67.552,112 68,111.552 68,111C68,110.448 67.552,110 67,110L61,110C60.448,110 60,110.448 60,111C60,111.552 60.448,112 61,112ZM52,106C52,106 76,106 76,106C77.105,106 78,105.105 78,104L78,102C78,100.895 77.105,100 76,100C71.866,100 56.134,100 52,100C50.895,100 50,100.895 50,102L50,104C50,105.105 50.895,106 52,106Z" transform="translate(-48 -96)"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">Procurement</h3>
+                    <p class="text-gray-600 leading-relaxed">End-to-end procurement services for companies to source and supply what you need, on time and on budget.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift hover-glow group animate-slide-up border-emerald-400 border-1" style="animation-delay: 0.1s;">
+                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-8 bg-gradient-to-br from-emerald-100 to-emerald-200 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <svg class="w-10 h-10 text-emerald-600" viewBox="0 0 500 500" fill="currentColor">
+                            <g>
+                                <polygon class="st0" points="349.87,69.996 256,143.949 162.13,69.996 0,195.486 75.852,290.3 123.259,254.902 123.259,442.004 
+                                    388.741,442.004 388.741,254.902 436.148,290.3 512,195.486 	"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 group-hover:text-emerald-600 transition-colors">Merchandise</h3>
+                    <p class="text-gray-600 leading-relaxed">Corporate and event merchandise with quality branding to elevate your presence.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift hover-glow group animate-slide-up border-purple-400 border-1" style="animation-delay: 0.2s;">
+                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-8 bg-gradient-to-br from-purple-100 to-purple-200 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <svg class="w-10 h-10 text-purple-600" viewBox="144 144 512 512" fill="currentColor">
+                            <g id="IconSvg_bgCarrier" stroke-width="0"></g>
+                            <g id="IconSvg_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"></g>
+                            <g id="IconSvg_iconCarrier">
+                                <g xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m332.82 500.76 20.523-92.363h29.855l0.003906-33.59h-151.14v125.95h-33.586v100.76h235.11c-0.003906-55.648-45.125-100.76-100.77-100.76z"/>
+                                    <path d="m534.35 261.45v-12.594h-33.586v-16.793l-33.59-16.793v-16.793h-50.383v50.383h-33.59l0.003906-50.383h-25.191v50.383l-33.586-0.003906v-50.379h-92.363c-18.473 0-33.586 15.117-33.586 33.586v83.969c0 18.469 15.113 33.586 33.586 33.586h235.11v-16.793l33.586-16.797v-16.789h33.59v-12.594l67.172-4.1992v-16.793zm-268.71 20.996c-13.891 0-25.176-11.266-25.176-25.191 0-13.926 11.281-25.191 25.176-25.191 13.926 0 25.207 11.266 25.207 25.191 0 13.926-11.281 25.191-25.207 25.191z"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">Milwaukee Products</h3>
+                    <p class="text-gray-600 leading-relaxed">Sales and supply of Milwaukee professional tools and accessories.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift hover-glow group animate-slide-up border-orange-400 border-1" style="animation-delay: 0.3s;">
+                    <div class="w-20 h-20 rounded-2xl flex items-center justify-center mb-8 bg-gradient-to-br from-orange-100 to-orange-200 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <svg class="w-10 h-10 text-orange-600" viewBox="0 0 1000 491.99133" fill="currentColor">
+                            <sodipodi:namedview id="namedview21" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" showgrid="false" inkscape:zoom="0.5" inkscape:cx="653" inkscape:cy="238" inkscape:window-width="1366" inkscape:window-height="705" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="svg19"/>
+                            <defs id="defs7"/>
+                            <g id="g1415">
+                                <path id="path1410" style="fill:#e93c00;fill-opacity:1;stroke-width:22.4009" d="M 908.25195 36.21875 C 883.98641 36.21875 856.39709 42.169869 828.65625 61.669922 C 796.9332 83.969213 771.3875 113.93514 752.7832 147.95703 C 825.38725 98.99494 912.89821 77.125322 1000 86.175781 C 990.04774 64.668852 955.06955 36.21875 908.25195 36.21875 z "/>
+                                <path id="path1407" style="fill:#fd7a00;fill-opacity:1;stroke-width:22.4009" d="M 597.94727 0.021484375 C 504.9132 0.021484375 413.88614 27.032192 337.38086 79.970703 C 504.80491 52.507245 631.54662 64.278865 659.05859 109.51758 C 678.34201 141.22586 625.45703 190.16211 625.45703 190.16211 C 714.11965 179.7681 761.69433 123.73879 753.38867 77.013672 C 745.47612 32.500065 693.19573 0.021484375 597.94727 0.021484375 z "/>
+                                <path style="fill:#1800e0;fill-opacity:1;stroke-width:22.4009" d="M 397.66211,209.98633 V 491.96875 H 520.01562 V 353.41992 c 0,-3.44345 3.09762,-6.18359 6.54102,-6.18359 2.13216,0 4.40968,1.00235 5.44336,2.86719 l 78.64844,141.86523 h 60.48437 l 78.64844,-141.86523 c 1.03368,-1.86484 3.3112,-2.86719 5.44336,-2.86719 3.4434,0 6.54102,2.74014 6.54101,6.18359 V 491.96875 H 884.11914 V 209.98633 H 725.74609 c -4.95424,0 -9.3434,2.51655 -11.76171,6.87695 l -67.56055,121.81641 c -1.21483,2.19042 -3.36667,3.35937 -5.53321,3.35937 -2.16649,0 -4.31837,-1.16895 -5.5332,-3.35937 L 567.79688,216.86328 c -2.41833,-4.36041 -6.80748,-6.87695 -11.76172,-6.87695 z" id="path1430"/>
+                                <path style="fill:#1800e0;fill-opacity:1;stroke-width:22.4009" d="m 0,209.98633 v 95.78515 h 114.93945 c 3.71184,-2.4e-4 6.72095,3.00887 6.72071,6.72071 V 491.96875 H 249.6582 V 312.35742 c 8.4e-4,-3.71107 3.00963,-6.71899 6.72071,-6.71875 h 114.93945 v -95.65234 z" id="path1404"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">Unifi Services</h3>
+                    <p class="text-gray-600 leading-relaxed">Official unifi internet and telecommunications services with premium support and reliability.</p>
+                </div>
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border-sky-400 border-1">
+                    <div class="w-16 h-16 rounded-lg flex items-center justify-center mb-6 bg-gradient-to-br from-sky-100 to-sky-200">
+                        <svg class="w-9 h-9 text-sky-600" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3 7h7l-5.5 4.5L19 22l-7-4.5L5 22l2.5-8.5L2 9h7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Manpower Supply</h3>
+                    <p class="text-gray-600">Skilled manpower supply for projects and ongoing operations.</p>
+                </div>
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border-amber-400 border-1">
+                    <div class="w-16 h-16 rounded-lg flex items-center justify-center mb-6 bg-gradient-to-br from-amber-100 to-amber-200">
+                        <svg class="w-9 h-9 text-amber-600" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 21h18v-2H3v2zM5 17h14l-2-7h-3V5H10v5H7l-2 7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Construction</h3>
+                    <p class="text-gray-600">Construction services with quality, safety, and compliance.</p>
+                </div>
+    
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border-indigo-400 border-1">
+                    <div class="w-16 h-16 rounded-lg flex items-center justify-center mb-6 bg-gradient-to-br from-indigo-100 to-indigo-200">
+                        <svg class="w-9 h-9 text-indigo-600" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4 5h16v4H4zM4 11h10v8H4zM16 11h4v8h-4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">IT</h3>
+                    <p class="text-gray-600">IT solutions, infrastructure, and support for your business.</p>
+                </div>
+    
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border-rose-400 border-1">
+                    <div class="w-16 h-16 rounded-lg flex items-center justify-center mb-6 bg-gradient-to-br from-rose-100 to-rose-200">
+                        <svg class="w-9 h-9 text-rose-600" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 6h12v4H6zM4 12h16v2H4zm2 4h12v2H6z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Spare Parts Supply</h3>
+                    <p class="text-gray-600">Reliable supply of industrial and technical spare parts.</p>
+                </div>
+    
+                <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border-teal-400 border-1">
+                    <div class="w-16 h-16 rounded-lg flex items-center justify-center mb-6 bg-gradient-to-br from-teal-100 to-teal-200">
+                        <svg class="w-9 h-9 text-teal-600" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M31.01001,7.07001l-2.53003,2.52997l-1.57996,1.57001c-1.67004,1.67999-4.40002,1.67999-6.07001,0c-0.81-0.81-1.26001-1.89001-1.26001-3.03998c0-1.14001,0.45001-2.22003,1.26001-3.03003l1.57001-1.58002l2.52997-2.52997c-3.41998-1.13-7.26001-0.26001-9.83997,2.32001c-2.36005,2.37-3.30005,5.83002-2.52002,9.06L1.96002,22.96997c-1.94,1.95001-1.94,5.12,0,7.07001C2.94,31.01001,4.21997,31.5,5.5,31.5s2.54999-0.48999,3.53003-1.46002L19.63,19.42999c3.22998,0.77997,6.69-0.16003,9.06-2.52002C31.27002,14.32996,32.14001,10.48999,31.01001,7.07001z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Service Maintenance</h3>
+                    <p class="text-gray-600">Preventive and corrective maintenance to keep your operations running.</p>
+                </div>
+            </div>
+		</div>
+	</section>
+
+    <!-- Clients Section with provided list -->
+	<section class="bg-gradient-to-br from-white via-gray-50 to-gray-100 py-20 relative overflow-hidden">
+		<!-- Background decoration -->
+		<div class="absolute inset-0 bg-gradient-to-r from-blue-500/3 to-purple-500/3"></div>
+		
+		<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16 animate-fade-in">
+				<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+					Trusted by <span class="text-gradient">Leading Companies</span>
+				</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    We're proud to serve businesses across Malaysia
+				</p>
+			</div>
+			
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                <div class="text-center animate-slide-up">
+                    <div class="bg-white rounded-2xl p-8 h-36 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover-lift">
+                        <img src="/src/clients/jabatan_imigresen.png" alt="Jabatan Imigresen" class="max-h-24 w-auto" loading="lazy" />
+                    </div>
+                </div>
+                <div class="text-center animate-slide-up" style="animation-delay: 0.1s;">
+                    <div class="bg-white rounded-2xl p-8 h-36 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover-lift">
+                        <img src="/src/clients/leesing_logistics.png" alt="Leesing Logistics" class="max-h-24 w-auto" loading="lazy" />
+                    </div>
+                </div>
+                <div class="text-center animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="bg-white rounded-2xl p-8 h-36 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover-lift">
+                        <img src="/src/clients/mgv_energy.png" alt="MGV Energy" class="max-h-24 w-auto" loading="lazy" />
+                    </div>
+                </div>
+                <div class="text-center animate-slide-up" style="animation-delay: 0.3s;">
+                    <div class="bg-white rounded-2xl p-8 h-36 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover-lift">
+                        <img src="/src/clients/helang_bestari.png" alt="Helang Bestari" class="max-h-24 w-auto" loading="lazy" />
+                    </div>
+                </div>
+                <div class="text-center animate-slide-up" style="animation-delay: 0.4s;">
+                    <div class="bg-white rounded-2xl p-8 h-36 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover-lift">
+                        <img src="/src/clients/sapura_energy.png" alt="Sapura Energy" class="max-h-24 w-auto" loading="lazy" />
+                    </div>
+                </div>
+                <div class="text-center animate-slide-up" style="animation-delay: 0.5s;">
+                    <div class="bg-white rounded-2xl p-8 h-36 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover-lift">
+                        <img src="/src/clients/serba_dinamik.png" alt="Serba Dinamik" class="max-h-24 w-auto" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-24 relative overflow-hidden">
+		<!-- Background decoration -->
+		<div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20"></div>
+		<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-white/50 via-white to-white/50"></div>
+		
+		<!-- Animated background elements -->
+		<div class="absolute inset-0 overflow-hidden">
+			<div class="absolute top-1/3 left-1/4 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-bounce-gentle"></div>
+			<div class="absolute bottom-1/3 right-1/4 w-48 h-48 bg-white/10 rounded-full blur-2xl animate-bounce-gentle" style="animation-delay: 1.5s;"></div>
+		</div>
+		
+		<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-4xl md:text-6xl font-bold mb-8 animate-fade-in">
+				Ready to <span class="text-white">Get Started?</span>
+			</h2>
+			<p class="text-xl mb-12 text-blue-100 max-w-3xl mx-auto leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
+				Contact us today to learn more about our services and how we can help your business succeed.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up" style="animation-delay: 0.4s;">
+				<a href="/contact" class="bg-white text-blue-600 px-10 py-4 rounded-xl font-semibold hover:bg-blue-50 hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg">
+					Contact Us
+				</a>
+				<a href="tel:+6085654320" class="border-2 border-white text-white px-10 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 hover:shadow-xl hover:scale-105 transition-all duration-300 backdrop-blur-sm">
+					Call Now: +60 85-654-320
+				</a>
+			</div>
+		</div>
+	</section>
+</Layout>

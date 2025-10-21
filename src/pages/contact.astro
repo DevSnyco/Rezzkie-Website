@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact Us">
+	<section class="bg-white pt-0 pb-20">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Contact Us</h1>
+			<p class="text-lg text-gray-600 mb-10">We'd love to hear from you. Reach us via email or phone, or send us a message below.</p>
+
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+				<!-- Contact Details -->
+				<div class="md:col-span-1 space-y-6">
+					<div>
+						<h2 class="text-sm uppercase tracking-wide text-gray-500 mb-1">Email</h2>
+						<p class="text-lg font-medium text-gray-900">contact@rezzkie.com</p>
+					</div>
+					<div>
+						<h2 class="text-sm uppercase tracking-wide text-gray-500 mb-1">Office Phone</h2>
+						<p class="text-lg font-medium text-gray-900">+60 85-654320</p>
+					</div>
+					<div>
+						<h2 class="text-sm uppercase tracking-wide text-gray-500 mb-1">Whatsapp</h2>
+						<p class="text-lg font-medium text-gray-900">+60 10-4521095</p>
+					</div>
+					<div>
+						<h2 class="text-sm uppercase tracking-wide text-gray-500 mb-1">Office</h2>
+						<p class="text-lg font-medium text-gray-900">Lot 7169, Ground Floor, Block 11, Bandar Baru Permyjaya, 98000 Miri, Sarawak, Malaysia</p>
+					</div>
+					<div class="pt-4">
+						<h2 class="text-sm uppercase tracking-wide text-gray-500 mb-2">Follow us</h2>
+						<div class="flex space-x-4">
+							<a href="https://www.facebook.com/TADPermyjayaMiri/" class="text-gray-500 hover:text-blue-600">Facebook</a>
+							<a href="https://www.instagram.com/unifi_tmpermyjaya" class="text-gray-500 hover:text-blue-600">Instagram</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Contact Form (static) -->
+				<div class="md:col-span-2">
+					<!-- center + constrain form width so inputs don't stretch too far -->
+					<div class="bg-gray-50 border rounded-2xl p-8 max-w-2xl mx-auto w-full">
+						<form class="space-y-6" name="contact" netlify>
+							<div class="mr-8">
+								<label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+								<input
+									type="text"
+									name="name"
+									required
+									autocomplete="name"
+									class="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-sm placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow transition-colors appearance-none"
+									placeholder="Your name"
+								/>
+							</div>
+							<div class="mr-8">
+								<label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+								<input
+									type="email"
+									name="email"
+									required
+									autocomplete="email"
+									class="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-sm placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow transition-colors appearance-none"
+									placeholder="you@example.com"
+								/>
+							</div>
+							<div class="mr-8">
+								<label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+								<textarea
+									name="message"
+									required
+									rows="5"
+									class="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-sm placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow transition-colors appearance-none resize-none h-40"
+									placeholder="How can we help?"
+								></textarea>
+							</div>
+							<div class="flex justify-end">
+								<button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Send Message</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

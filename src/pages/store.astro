@@ -1,0 +1,174 @@
+---
+import Layout from '../layouts/Layout.astro';
+const items = [
+    {
+        id: 1,
+        name: 'Milwaukee M18 Drill Driver',
+        category: 'Milwaukee',
+        price: 'RM 899',
+        description: 'Compact, high-torque drill driver suitable for heavy-duty work and long runtimes.',
+        features: ['Brushless motor for longer life', '2-speed gearbox', 'Built-in LED worklight']
+    },
+    {
+        id: 2,
+        name: 'Milwaukee M12 Impact Wrench',
+        category: 'Milwaukee',
+        price: 'RM 699',
+        description: 'Lightweight impact wrench with excellent torque for fastener work in tight spaces.',
+        features: ['High torque output', 'Compact form factor', 'Ergonomic rubber grip']
+    },
+    {
+        id: 3,
+        name: 'Unifi Business Plan 100Mbps',
+        category: 'Unifi',
+        price: 'From RM 89/mo',
+        description: 'Reliable business-grade internet plan with stable speeds and dedicated support.',
+        features: ['100Mbps symmetric plan', 'Priority business support', 'Optional static IP']
+    },
+    {
+        id: 4,
+        name: 'Corporate Polo T-Shirt (Branding)',
+        category: 'Merchandise',
+        price: 'From RM 39.99',
+        description: 'Comfortable corporate polos available for bulk branding and custom orders.',
+        features: ['Multiple sizes & colours', 'Custom embroidery available', 'Breathable fabric']
+    },
+    {
+        id: 5,
+        name: "Oil and Gas safety tools & equipment",
+        category: 'Safety',
+        price: 'From RM 9.99',
+        description: 'Wide selection of safety tools and equipment designed for O&G industry standards.',
+        features: ['Certified safety gear', 'Rugged construction', 'Bulk order discounts']
+    },
+];
+---
+
+<Layout title="Store">
+    <section class="bg-gradient-to-br from-gray-50 via-white to-gray-100 pt-0 pb-24 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                    Our <span class="text-gradient">Store</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Search for products and services we offer</p>
+            </div>
+
+            <!-- Unified Alpine scope: search input + filtering logic -->
+            <div
+                x-data="{ q: '' }"
+                x-init="
+                    // watch q and toggle .hidden on elements with [data-item]
+                    $watch('q', value => {
+                        const q = (value || '').toLowerCase().trim();
+                        Array.from($el.querySelectorAll('[data-item]')).forEach(el => {
+                            const t = (el.getAttribute('data-search') || '').toLowerCase();
+                            el.classList.toggle('hidden', q !== '' && !t.includes(q));
+                        });
+                    });
+                "
+                class="mb-12 animate-slide-up"
+            >
+                <!-- Search input -->
+                <div class="max-w-2xl mx-auto">
+                    <div class="relative">
+                        <input
+                            x-model="q"
+                            type="text"
+                            placeholder="Search items..."
+                            class="w-full border-2 border-gray-200 rounded-2xl px-6 pr-14 h-14 text-lg leading-none focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-200 hover:shadow-lg"
+                            style="background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2024%2024%27%20fill=%27none%27%20stroke=%27%239CA3AF%27%20stroke-width=%272%27%20stroke-linecap=%27round%27%20stroke-linejoin=%27round%27%3E%3Ccircle%20cx=%2711%27%20cy=%2711%27%20r=%277%27/%3E%3Cline%20x1=%2721%27%20y1=%2721%27%20x2=%2716.65%27%20y2=%2716.65%27/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 20px;"
+                            aria-label="Search items"
+                        />
+                    </div>
+                </div>
+
+                <!-- Grid of items (filtering handled by the x-init watcher above) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6">
+                    {items.map((item, index) => (
+                        <div
+                            data-item
+                            data-search={(item.name + ' ' + item.category).toLowerCase()}
+                            x-data="{ open: false }"
+                            class="relative bg-white rounded-2xl px-5 pb-5 shadow-sm hover:shadow-md transition-all duration-300 group animate-slide-up border-blue-300 border-1 overflow-visible min-h-[200px] flex flex-col justify-between"
+                            style={`animation-delay: ${index * 0.1}s;`}
+                        >
+                            <!-- Header / main visible content -->
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{item.name}</h3>
+                                </div>
+
+                                <p class="text-2xl font-bold text-gray-900 ml-1 mb-2">{item.price}</p>
+                            </div>
+
+                            <div class="flex items-center justify-between mt-4">
+                                <!-- Learn More button: toggles overlay panel (no arrow) -->
+                                <button
+                                    type="button"
+                                    @click="open = !open"
+                                    :aria-expanded="open.toString()"
+                                    class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-2xl font-semibold hover:from-blue-700 hover:to-blue-800 hover:shadow-md transition-all duration-300 shadow-sm"
+                                >
+                                    <span x-text="open ? 'Hide details' : 'Learn More'">Learn More</span>
+                                </button>
+
+                                <div class="ml-3">
+                                    <span class="text-md px-2 py-0 rounded-full bg-gradient-to-r from-blue-100 to-blue-200 text-blue-700 font-medium">{item.category}</span>
+                                </div>
+                            </div>
+
+                            <!-- Expandable details panel as an absolute overlay inside the card.
+                                 Because it's absolutely positioned it won't change sibling card widths/heights. -->
+                            <div
+                                x-cloak
+                                x-show="open"
+                                x-transition:enter="transition ease-out duration-200"
+                                x-transition:enter-start="opacity-0 translate-y-2"
+                                x-transition:enter-end="opacity-100 translate-y-0"
+                                x-transition:leave="transition ease-in duration-150"
+                                x-transition:leave-start="opacity-100 translate-y-0"
+                                x-transition:leave-end="opacity-0 translate-y-2"
+                                @click.away="open = false"
+                                class="absolute left-4 right-4 bottom-4 z-30 bg-white border border-gray-100 rounded-xl p-4 shadow-xl text-gray-700"
+                                style="backdrop-filter: blur(6px);"
+                            >
+                                <p class="text-sm leading-relaxed">{item.description}</p>
+
+                                <ul class="list-disc ml-5 mt-3 space-y-1">
+                                    {item.features.map((f) => (
+                                        <li class="text-sm">{f}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            
+            <!-- Enhanced CTA -->
+            <div class="mt-16 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 rounded-3xl text-white p-12 text-center relative overflow-hidden animate-fade-in">
+                <!-- Background decoration -->
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20"></div>
+                <div class="absolute top-0 left-0 w-full h-1"></div>
+                
+				<div class="relative">
+					<h3 class="text-3xl font-bold mb-4">Can't find what you're looking for?</h3>
+					<p class="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">Contact us for custom solutions and personalized recommendations.</p>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a href="/contact" class="bg-white text-blue-700 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 hover:shadow-xl hover:scale-105 transition-all duration-300 shadow-lg">Contact Us</a>
+						<a href="tel:+6085654320" class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-700 hover:shadow-xl hover:scale-105 transition-all duration-300 backdrop-blur-sm">Call +6085-654320</a>
+					</div>
+				</div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+
+
